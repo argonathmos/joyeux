@@ -24,3 +24,7 @@ npm install
 ```
 npm start
 ```
+
+## Screenshot 
+
+![Joyeux UI screenshot](images/Screenshot_2021-04-28.png "Joyeux")
