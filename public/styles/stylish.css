@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(34,39,46);
+    font-family: monospace;
+    font-size: 15px;
+    width: 75%;
+    max-width:640px;
+    margin: 10px auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1, p{
+    color: rgb(205,217,229);
+    text-align:center;
+
+}
+a{
+    color: rgb(83,155,245);
+}
+a:active{
+    color:hotpink;
+}
+a:visited{
+    color:rgb(83,155,245);
+}
+form{
+    height: 25vh;
+    border:1px solid rgb(205,217,229);
+    padding: 40px 20px 20px;
+    border-radius: 3px;
+    
+    
+}
+
+.form-control-label{
+    display: block;
+    width:100%;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size:1.4rem;
+    color: rgb(83,155,245);
+
+}
+.form-control-field{
+    appearance: none;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 2;
+    border-radius: .3rem;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    color: #495057;
+    background-color: fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    margin-bottom: 1.5rem;
+    
+}
+.form-control-field:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.btn{
+    
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    padding: .375rem .75rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    border-radius: .25rem;
+    
+    color: rgb(83,155,245);
+    background-color: transparent;
+    background-image: none;
+    border-color: rgb(83,155,245);
+    cursor: pointer;
+
+    min-width: 15%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+.btn:hover {
+    color: #fff;
+    background-color: rgb(83,155,245);
+    border-color: rgb(83,155,245);
+}
