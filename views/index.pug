@@ -1,39 +1,43 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title 🦦 | Joyeux
-        link(rel="stylesheet" type="text/css" href="styles/stylish.css")
-    body 
-        h1 Welcome to Joyeux ! 🦦
-        p ⚡️ Get #[b instant] backend #[b validation feedback] for your #[a(href="https://joi.dev" target="_blank") Joi] schemas ⚡️
-        form(action="/" method="post")
-            div
-                label.form-control-label(for="value") Value: 
-                input.form-control-field(
-                    type="text" 
-                    id="value" 
-                    name="value" 
-                    value= feedback ? feedback.value : "Enter value to validate"
-                    )
-            div
-                label.form-control-label(for="joi") Joi validation schema:
-                input.form-control-field(
-                    type="text" 
-                    id="joi" 
-                    name="schema" 
-                    value= feedback ? feedback.schema : 'Joi.string().min(10)'
-                    )
-            
-            input.btn(type="submit" value="VALIDATE")
-        
-        if validationResult 
-            if validationResult.error
-                div
-                    p ❌ #[b #{feedback.value}] did not pass validation. 😢
-                    p=validationResult.error
-            else 
-                div 
-                    p ✅ #[b #{feedback.value}] validated against the schema you provided: #[b Bravo 👏 !!] 
+  head
+    meta(charset="UTF-8")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+    meta(content="width=device-width, initial-scale=1.0" name="viewport")
+    title 🦦 | Joyeux
+    link(
+      href="styles/tailwind.css"
+      rel="stylesheet"
+      type="text/css"
+    )
+  body 
+    h1 Welcome to Joyeux ! 🦦
+    p ⚡️ Get #[b instant] backend #[b validation feedback] for your #[a(href="https://joi.dev" target="_blank") Joi] schemas ⚡️
+    form(action="/" method="post")
+      div
+        label(for="value") Value:
+        input(
+          id="value"
+          name="value"
+          type="text"
+          value=feedback ? feedback.value : 'Enter value to validate'
+        )
+      div
+        label(for="joi") Joi validation schema:
+        input(
+          id="joi"
+          name="schema"
+          type="text"
+          value=feedback ? feedback.schema : 'Joi.string().min(10)'
+        )
+
+      input(type="submit" value="VALIDATE")
+
+    if validationResult
+      if validationResult.error
+        div
+          p ❌ #[b #{ feedback.value }] did not pass validation. 😢
+          p= validationResult.error
+      else
+        div 
+          p ✅ #[b #{ feedback.value }] validated against the schema you provided: #[b Bravo 👏 !!]
