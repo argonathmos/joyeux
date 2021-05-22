@@ -13,33 +13,49 @@ html(lang="en")
   body(
     class="font-mono text-base text-gray-50 bg-gray-800 w-3/4 max-w-screen-sm my-10 mx-auto flex flex-col justify-center"
   ) 
-    h1 Welcome to Joyeux ! 🦦
-    p ⚡️ Get #[b instant] backend #[b validation feedback] for your #[a(href="https://joi.dev" target="_blank") Joi] schemas ⚡️
-    form(action="/" method="post")
+    h1(class="text-center text-xl") Welcome to Joyeux ! 🦦
+    p(class="text-center") ⚡️ Get #[b instant] backend #[b validation feedback] for your #[a(class="text-blue-400 focus:text-pink-600 visited:text-blue-200" href="https://joi.dev" target="_blank") Joi] schemas ⚡️
+    form(
+      action="/"
+      class="h-96 border border-solid border-blue-100 py-10 px-5 rounded-lg"
+      method="post"
+    )
       div
-        label(for="value") Value:
+        label(
+          class="w-full text-left inline-block mb-2 text-2xl text-blue-400"
+          for="value"
+        ) Value:
         input(
+          class="appearance-none px-2 py-4 text-xl rounded text-inherit block w-full text-gray-600 bg-white .bg-clip-padding border border-solid border-gray-50 mb-6 focus:text-gray-600 focus:border-blue-400 focus:outline-none focus:shadow-md focus:ring-0"
           id="value"
           name="value"
           type="text"
           value=feedback ? feedback.value : 'Enter value to validate'
         )
       div
-        label(for="joi") Joi validation schema:
+        label(
+          class="w-full text-left inline-block mb-2 text-2xl text-blue-400"
+          for="joi"
+        ) Joi validation schema:
         input(
+          class="appearance-none px-2 py-4 text-xl rounded text-inherit block w-full text-gray-600 bg-white .bg-clip-padding border border-solid border-gray-50 mb-6 focus:text-gray-600 focus:border-blue-400 focus:outline-none focus:shadow-md focus:ring-0"
           id="joi"
           name="schema"
           type="text"
           value=feedback ? feedback.schema : 'Joi.string().min(10)'
         )
 
-      input(type="submit" value="VALIDATE")
+      input(
+        class="block mx-auto mt-10 text-center bg-transparent hover:bg-blue-500 text-blue-400 font-normal hover:text-white py-2 px-4 border border-blue-400 hover:border-transparent rounded"
+        type="submit"
+        value="VALIDATE"
+      )
 
     if validationResult
       if validationResult.error
         div
-          p ❌ #[b #{ feedback.value }] did not pass validation. 😢
-          p= validationResult.error
+          p(class="text-center") ❌ #[b #{ feedback.value }] did not pass validation. 😢
+          p(class="text-center")= validationResult.error
       else
         div 
-          p ✅ #[b #{ feedback.value }] validated against the schema you provided: #[b Bravo 👏 !!]
+          p(class="text-center") ✅ #[b #{ feedback.value }] validated against the schema you provided: #[b Bravo 👏 !!]
