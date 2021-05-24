@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./views/*.pug"],
   theme: {
     fontFamily: {
       thatCoolColophonFont: ['"Space Mono"', "monospace"], // Ensure fonts with spaces have " " surrounding it.
