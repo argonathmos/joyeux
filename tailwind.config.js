@@ -1,5 +1,8 @@
 module.exports = {
   theme: {
+    fontFamily: {
+      thatCoolColophonFont: ['"Space Mono"', "monospace"], // Ensure fonts with spaces have " " surrounding it.
+    },
     colors: {
       gray: {
         50: "#cdd9e5",
