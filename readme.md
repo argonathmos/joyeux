@@ -27,5 +27,5 @@ npm start
 
 ## Screenshot 
 
-![hello-joyeux](https://user-images.githubusercontent.com/65337143/122720208-16263800-d267-11eb-9cdc-b1abcdd54e7b.gif)
+![hello-joyeux](https://user-images.githubusercontent.com/65337143/122721399-84b7c580-d268-11eb-81ec-57dd28969351.gif)
 
