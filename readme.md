@@ -27,5 +27,5 @@ npm start
 
 ## Screenshot 
 
-![Joyeux UI screenshot](https://user-images.githubusercontent.com/65337143/119224195-39898600-baf5-11eb-8ceb-913d7ce4cc97.png)
+![hello-joyeux](https://user-images.githubusercontent.com/65337143/122720208-16263800-d267-11eb-9cdc-b1abcdd54e7b.gif)
 
